@@ -9,7 +9,7 @@
 using namespace graal;
 
 #define which_lib graal
-//#define which_lib std // descomente para testar a mesma função usando a biblioteca padrão.
+#define which_lib std
 
 int main ( void )
 {
