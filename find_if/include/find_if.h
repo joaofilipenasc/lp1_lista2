@@ -11,12 +11,21 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ *  @param first Ponteiro apontando para o inicio do range
+ *  @param last Ponteiro apontando para o fim do range  
+ *  @param p Função que retorna true quando uma determinada condição é satisfeita ou falso caso contrário.
  */
+
+bool p(const string &b);
+
 template<class InputIt, class UnaryPredicate>
-InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
-{
-    // TODO
+InputIt find_if(InputIt first, InputIt last, UnaryPredicate p) {
+    while (first != last) {
+        if (p(*first)) {
+            return first;
+        }
+        ++first;
+    }
     return first;
 }
 
