@@ -11,7 +11,8 @@ using std::sort;
 namespace graal {
 
 /*! 
- * 
+ *  @param first Ponteiro apontando para o início do range a ser considerado
+ *  @param last Ponteiro apontando para o fim do range a ser considerado
  */
 
 template <class ForwardIterator1, class ForwardIterator2>
