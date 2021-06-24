@@ -11,13 +11,12 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * 
  */
 template<class InputIt, class Equal>
-InputIt unique( InputIt first, InputIt last, Equal eq )
-{
-    // TODO
-    return last;
+InputIt unique(InputIt first, InputIt last, Equal eq) {
+    
+    
 }
 
 }

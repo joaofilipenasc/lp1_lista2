@@ -11,12 +11,11 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * 
  */
 template<class ForwardIt, class Comparison>
-void sort(ForwardIt first, ForwardIt last, Comparison cmp)
-{
-    // TODO
+void sort(ForwardIt first, ForwardIt last, Comparison cmp) {
+   return sort(first, last, comp) == last; 
 }
 
 }
