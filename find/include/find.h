@@ -11,14 +11,25 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * 
  */
-template<class InputIt, class T, class Equal>
-InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
-{
-    // TODO
-    return first;
+
+    template<class InputIt, class T, class Equal>
+    InputIt find(InputIt first, InputIt last, const T& value, Equal eq) {
+        while (first != last) {
+            if (*first == value) {
+                return first;
+            }
+            ++first;
+        }
+        return last;
+
+        if eq(*first, *last) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
-}
 #endif
