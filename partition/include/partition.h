@@ -11,13 +11,28 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * 
  */
+
 template<class ForwardIt, class UnaryPredicate>
-ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
-{
-    // TODO
-    return last;
+ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p) {
+    while (first != last) {
+        while (p(*first)) {
+            ++first;
+            if (first == last) {
+                return first;
+            }
+        }
+    do {
+      --last;
+      if (first == last) {
+        return first;
+      }
+    } while (!p(*last));
+    swap (*first,*last);
+    ++first;
+    }
+    return first;
 }
 
 }
